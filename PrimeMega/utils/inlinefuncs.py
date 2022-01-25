@@ -108,7 +108,7 @@ async def inline_help_func(__HELP__):
             input_message_content=InputTextMessageContent(
                 "**__Click A Button To Get Started.__**"
             ),
-            thumb_url="https://telegra.ph/file/74820c5c29d87eca403e0.jpg",
+            thumb_url="https://telegra.ph/file/91ccbe90ffe7f7c5107e5.jpg",
             reply_markup=buttons,
         ),
     ]
@@ -121,12 +121,12 @@ async def alive_function(answers):
     bot_state = "Dead" if not await app.get_me() else "Alive"
     ubot_state = "Dead" if not await ubot2.get_me() else "Alive"
     buttons.add(
-        InlineKeyboardButton("Main bot", url="https://t.me/PrimeMegaBot"),
+        InlineKeyboardButton("Main bot", url="https://t.me/HiroshiMusicBot"),
         InlineKeyboardButton("Go Inline!", switch_inline_query_current_chat=""),
     )
 
     msg = f"""
-**[ᴘʀɪᴍᴇ ᴍᴇɢᴀ](https://t.me/PrimeMegaBot):**
+**[ʜɪʀᴏsʜɪ ʀᴏʙᴏᴛ](https://t.me/HiroshiMusicBot):**
 **MainBot:** `{bot_state}`
 **UserBot:** `{ubot_state}`
 **Python:** `{pyver.split()[0]}`
@@ -139,7 +139,7 @@ async def alive_function(answers):
         InlineQueryResultArticle(
             title="Alive",
             description="Check Bot's Stats",
-            thumb_url="https://telegra.ph/file/74820c5c29d87eca403e0.jpg",
+            thumb_url="https://telegra.ph/file/91ccbe90ffe7f7c5107e5.jpg",
             input_message_content=InputTextMessageContent(
                 msg, disable_web_page_preview=True
             ),
@@ -374,7 +374,7 @@ async def lyrics_func(answers, text):
 
 async def tg_search_func(answers, text, user_id):
     if user_id not in DEV_USERS:
-        msg = "**ERROR**\n__THIS FEATURE IS ONLY FOR DEV USERS__"
+        msg = "**ERROR**\nTHIS FEATURE IS ONLY FOR DEV USERS"
         answers.append(
             InlineQueryResultArticle(
                 title="ERROR",
@@ -384,7 +384,7 @@ async def tg_search_func(answers, text, user_id):
         )
         return answers
     if str(text)[-1] != ":":
-        msg = "**ERROR**\n__Put A ':' After The Text To Search__"
+        msg = "**ERROR**\nPut A ':' After The Text To Search"
         answers.append(
             InlineQueryResultArticle(
                 title="ERROR",
@@ -431,8 +431,8 @@ async def tg_search_func(answers, text, user_id):
 
 
 async def music_inline_func(answers, query):
-    chat_id = -1001445180719
-    group_invite = "https://t.me/joinchat/vSDE2DuGK4Y4Nzll"
+    chat_id = -1001512737035
+    group_invite = "https://t.me/hiroshisupport"
     try:
         messages = [
             m
@@ -575,7 +575,7 @@ async def speedtest_init(query):
     answers = []
     user_id = query.from_user.id
     if user_id not in DEV_USERS:
-        msg = "**ERROR**\n__THIS FEATURE IS ONLY FOR DEV USERS__"
+        msg = "**ERROR**\nTHIS FEATURE IS ONLY FOR DEV USERS"
         answers.append(
             InlineQueryResultArticle(
                 title="ERROR",
@@ -641,7 +641,7 @@ async def yt_music_func(answers, url):
     loop = asyncio.get_running_loop()
     music = await loop.run_in_executor(None, download_youtube_audio, url)
     if not music:
-        msg = "**ERROR**\n__MUSIC TOO LONG__"
+        msg = "**ERROR**\nMUSIC TOO LONG"
         answers.append(
             InlineQueryResultArticle(
                 title="ERROR",
