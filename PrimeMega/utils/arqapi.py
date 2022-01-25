@@ -14,8 +14,8 @@ from search_engine_parser import GoogleSearch
 from PrimeMega import BOT_ID, OWNER_ID, ARQ_API_URL, ARQ_API_KEY
 from PrimeMega import pbot
 
-ARQ_API = "WZQUBA-PFAZQJ-OMIINH-MIVHYM-ARQ"
-ARQ_API_KEY = "WZQUBA-PFAZQJ-OMIINH-MIVHYM-ARQ"
+ARQ_API = "ZGPZGV-FMRMJD-XWBQPR-HSBNRZ-ARQ"
+ARQ_API_KEY = "ZGPZGV-FMRMJD-XWBQPR-HSBNRZ-ARQ"
 SUDOERS = OWNER_ID
 ARQ_API_URL = "https://thearq.tech"
 
