@@ -1,5 +1,5 @@
 {
-      "name": "Prime Mega",
+      "name": "Hiroshi Mega",
       "description": "A Powerful  Telegram group management bot with autobots theme.",
       "keywords": [
          "telegram",
@@ -10,7 +10,7 @@
       ],
     
    "logo":    "https://telegra.ph/file/1da0ff9b5983912852f83.jpg",  
-   "repository": "https://github.com/Tonic990/PrimeMega",
+   "repository": "https://github.com/UserbotMaps/Hiroshi-Robot",
    "addons": [
           {
          "options": {
